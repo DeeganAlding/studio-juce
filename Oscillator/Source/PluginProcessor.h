@@ -55,6 +55,7 @@ public:
 
 private:
     juce::dsp::Oscillator<float> osc{ [](float x) { return std::sin(x);} };
+    juce::dsp::Gain<float> gain;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (OscillatorAudioProcessor)
 };
